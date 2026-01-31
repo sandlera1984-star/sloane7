@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sloane7</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="terms-modal" class="modal" aria-hidden="true">
+      <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="terms-title">
+        <h2 id="terms-title">Terms &amp; Conditions</h2>
+        <div id="terms-scroll" class="terms-scroll" tabindex="0">
+          <p>
+            By accessing or purchasing any content on this site, you agree that all sales are final and
+            non-refundable. You understand that access to digital content is granted immediately upon
+            purchase and may not be revoked in exchange for a refund. You acknowledge that all content is
+            provided “as is” without warranties of any kind, express or implied, including but not limited
+            to fitness for a particular purpose. You agree to comply with all local, state, and federal laws
+            regarding digital content access. You agree that any disputes will be resolved through binding
+            arbitration, and you waive your right to participate in class actions. You understand that the
+            creator is not liable for any damages, losses, or claims arising from your use of the content.
+            You agree not to redistribute, reproduce, or share any content without explicit permission.
+            You confirm that you are of legal age in your jurisdiction to access adult content and that you
+            are solely responsible for ensuring compliance with your local laws. You agree that chargebacks
+            or payment disputes may result in immediate termination of access without notice. You accept that
+            prices, features, and availability may change at any time without notice. You agree that your
+            account may be terminated for violations of these terms. If you do not agree to these terms, do
+            not use this site.
+          </p>
+        </div>
+        <div id="terms-actions" class="terms-actions hidden">
+          <button id="agree-button" class="primary">Agree</button>
+          <button id="age-button" class="secondary">I Am Over 18 Years Of Age</button>
+        </div>
+      </div>
+    </div>
+
+    <header class="navbar">
+      <div class="logo">Sloane7</div>
+      <nav class="nav-links">
+        <button class="nav-btn" data-target="landing">Landing</button>
+        <button class="nav-btn" data-target="home">Home</button>
+        <button class="nav-btn" data-target="exclusive">Exclusive Content</button>
+      </nav>
+    </header>
+
+    <main>
+      <section id="landing" class="page active">
+        <div class="hero">
+          <div class="hero-text">
+            <h1>Welcome to Sloane7</h1>
+            <p>Exclusive creator-led experiences with a bold pink and purple vibe.</p>
+            <div class="signup-row">
+              <button id="signup-button" class="signup-btn">Sign Up</button>
+              <span class="price-text">5 CAD a month</span>
+            </div>
+          </div>
+          <div class="hero-card">
+            <h2>Admin Uploads</h2>
+            <div class="admin-access">
+              <label for="admin-code">Admin Access Code</label>
+              <input type="password" id="admin-code" placeholder="Enter code" />
+              <button id="unlock-uploads" class="secondary">Unlock Uploads</button>
+              <p id="admin-status" class="status">Uploads locked.</p>
+            </div>
+            <div class="upload-section">
+              <div class="upload-box" id="image-upload" data-type="image">
+                <h3>Upload Images</h3>
+                <p>Drag &amp; drop images here.</p>
+                <input type="file" accept="image/*" multiple hidden />
+              </div>
+              <div class="upload-box" id="video-upload" data-type="video">
+                <h3>Upload Videos</h3>
+                <p>Drag &amp; drop videos here.</p>
+                <input type="file" accept="video/*" multiple hidden />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="home" class="page">
+        <div class="home-layout">
+          <aside class="sidebar">
+            <button class="side-btn" data-home="grid">Home</button>
+            <button class="side-btn" data-home="account">Account</button>
+            <button class="side-btn" data-home="support">Support</button>
+            <button class="side-btn" data-home="contact">Contact</button>
+          </aside>
+          <div class="home-content">
+            <div id="home-grid" class="home-panel active">
+              <h2>Latest Uploads</h2>
+              <div id="uploads-grid" class="uploads-grid"></div>
+            </div>
+            <div id="home-account" class="home-panel">
+              <h2>Account</h2>
+              <p>Manage your membership and personal details.</p>
+            </div>
+            <div id="home-support" class="home-panel">
+              <h2>Support</h2>
+              <p>Need help? We are here to support you.</p>
+            </div>
+            <div id="home-contact" class="home-panel">
+              <h2>Contact</h2>
+              <form id="contact-form" class="contact-form">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="you@example.com" />
+
+                <label for="issue">Issue</label>
+                <select id="issue" required>
+                  <option value="" disabled selected>Select an issue</option>
+                  <option value="Payment">Payment</option>
+                  <option value="Account">Account</option>
+                  <option value="Subscription">Subscription</option>
+                </select>
+
+                <label for="description">Description (200 words max)</label>
+                <textarea id="description" rows="5" required></textarea>
+                <p id="word-count" class="word-count">0 / 200 words</p>
+
+                <button type="submit" class="primary">Send</button>
+              </form>
+              <p class="contact-note">This form must be sent before you can leave this section.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="exclusive" class="page">
+        <div class="exclusive-header">
+          <button id="exclusive-home" class="icon-btn" aria-label="Back to landing">
+            <svg width="32" height="32" viewBox="0 0 64 64" aria-hidden="true">
+              <path
+                d="M32 4c6 6 10 14 10 22 0 10-5 18-10 26-5-8-10-16-10-26 0-8 4-16 10-22z"
+                fill="#000"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="exclusive-content">
+          <h2>Under Construction</h2>
+        </div>
+      </section>
+    </main>
+
+    <div id="signup-modal" class="modal" aria-hidden="true">
+      <div class="circle-popup">
+        <p>Under Construction</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

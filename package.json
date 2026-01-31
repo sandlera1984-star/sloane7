@@ -1,0 +1,12 @@
+{
+  "name": "sloane7",
+  "version": "1.0.0",
+  "description": "Pink and purple landing page experience.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}
